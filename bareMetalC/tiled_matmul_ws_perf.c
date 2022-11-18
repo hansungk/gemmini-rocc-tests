@@ -10,7 +10,7 @@
 #endif
 #include "include/gemmini_testutils.h"
 
-#define NO_BIAS 0
+#define NO_BIAS 1
 #define REPEATING_BIAS 1
 
 #define A_TRANSPOSE 0
@@ -26,9 +26,9 @@
 // #define MAT_DIM_K 128
 // #define MAT_DIM_J 128
 
-#define MAT_DIM_I 256
-#define MAT_DIM_K 256
-#define MAT_DIM_J 256
+#define MAT_DIM_I 128
+#define MAT_DIM_K 128
+#define MAT_DIM_J 128
 
 // #define MAT_DIM_I 256
 // #define MAT_DIM_K 512
