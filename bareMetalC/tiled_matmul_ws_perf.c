@@ -76,6 +76,28 @@ int main() {
     static full_t gold_full[MAT_DIM_I][MAT_DIM_J];
     static elem_t gold[MAT_DIM_I][MAT_DIM_J];
 
+#define RAND rand()
+    printf("Init A\n");
+    for (size_t i = 0; i < MAT_DIM_I; ++i) {
+      for (size_t j = 0; j < MAT_DIM_K; ++j) {
+        full_A[i][j] = RAND % 2;
+      }
+    }
+
+    printf("Init B\n");
+    for (size_t i = 0; i < MAT_DIM_K; ++i) {
+      for (size_t j = 0; j < MAT_DIM_J; ++j) {
+        full_B[i][j] = RAND % 2;
+      }
+    }
+
+    printf("Init D\n");
+    for (size_t i = 0; i < MAT_DIM_I; ++i) {
+      for (size_t j = 0; j < MAT_DIM_J; ++j) {
+        full_D[i][j] = NO_BIAS ? 0 : RAND % 2;
+      }
+    }
+
     printf("Starting gemmini matmul\n");
     printf("I: %d, J: %d, K: %d\n", MAT_DIM_I, MAT_DIM_J, MAT_DIM_K);
     printf("NO_BIAS: %d, REPEATING_BIAS: %d\n", NO_BIAS, REPEATING_BIAS);
